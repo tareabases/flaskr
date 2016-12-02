@@ -37,15 +37,7 @@
   "database": "mongo",
   "description":
   "Muestra todos los mensajes que han intercambiado los usuarios con las id indicadas",
-  "query": 
-  
-  
-  
-  "messages.find({
-    "$where": "this.message  this.salu3"
-}, {
-    "message": 1
-})",
+  "query": "messages.find({"$where": "this.message  this.salu3"}, {\"message\": 1})",
   
   
   
