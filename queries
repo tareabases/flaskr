@@ -62,7 +62,7 @@
   "database": "mongo",
   "description":
   "agregar palabras que no se desean en el mensaje",
-  "query": "message.find({$text: {$search: "-" + {0}} )",
+  "query": "message.find({$text: {$search: \"- \" + {0}} )",
   "parametros": ["Palabra"]
   }
 ]
