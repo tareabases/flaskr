@@ -17,10 +17,10 @@
   "parametros": ["id emisor", "fechas"]
   },
     {
-  "name": "Consulta: Mensajes del usuario con Id = 1",
+  "name": "Consulta: Mensajes del usuario",
   "database": "mongo",
   "description":
-  "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
+  "Muestra todos los mensajes enviados por el usuario con la id indicada",
   "query": "messages.find({\"sender\": 1}, {\"message\": 1})",
   "parametros": ["prueba"]
   }
