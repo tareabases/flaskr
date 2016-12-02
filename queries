@@ -21,7 +21,7 @@
   "database": "mongo",
   "description":
   "Muestra todos los mensajes enviados por el usuario con la id indicada",
-  "query": "messages.find({\"sender\": 1}, {\"message\": 1}).pretty()",
+  "query": "messages.find({\"sender\": 1}, {\"message\": 1})",
   "parametros": ["prueba"]
   },
   {
