@@ -30,12 +30,12 @@
     "description":
       "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
     "query": "myCollection.insert( { \"attribute\": \"value\" } )"
-  }
+  },
   {
     "name": "Mensajes Emitidos Por un Usuario",
     "database": "mongo",
     "description": "selecciona los mensajes emitidos por una persona",
     "query": "SELECT * FROM mytable;"
     "params": [1]
-  },
+  }
 ]
