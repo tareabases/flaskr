@@ -15,5 +15,13 @@
   "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
   "query": "myCollection.find( {\"attribute\": \"value\"} )",
   "parametros": ["id emisor", "fechas"]
+  },
+    {
+  "name": "Consulta: prueba",
+  "database": "mongo",
+  "description":
+  "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
+  "query": "users.find( {\"id\": 1,}, {\"age\": 1, \"name\": 1} )",
+  "parametros": ["id emisor"]
   }
 ]
