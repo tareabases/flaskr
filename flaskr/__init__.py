@@ -56,6 +56,14 @@ def home():
 @app.route("/mongo")
 def mongo():
     query = request.args.get("query")
+    for i in range(10):
+        cosa = request.args.get("par"+str(i))
+        if cosa is not None:
+            a = "{"+str(i)+"}"
+            query = query.replace(a, cosa)
+        print(cosa)
+    print(query)
+    #query = query.format(**dictp)
     results = eval('mongodb.'+query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
