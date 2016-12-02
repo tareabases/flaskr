@@ -9,12 +9,12 @@
   "parametros": ["id emisor"]
   },
   {
-  "name": "Consulta: Mensajes intercambiados",
+  "name": "Consulta: Mensajes emitidos por un usuario, con localizacion",
   "database": "mongo",
   "description":
-  "Muestra todos los mensajes que han intercambiado los usuarios con las id indicadas",
-  "query": "messages.find({ $or: [{\"sender\": {0}, \"receptant\": {1}}, {\"sender\": {1}, \"receptant\": {0}}], {\"message\": 1})",
-  "parametros": ["emisor", "receptor"]
+  "Muestra todos los mensajes enviados por el usuario con la id indicada, y con coordenadas indicadas en el input.",
+  "query": "messages.find({\"sender\": {0}, \"lat\": {1}, \"long\": {2}}, {\"message\": 1})",
+  "parametros": ["id emisor", "lat", "long"]
   },
   {
   "name": "Consulta: Mensajes intercambiados",
@@ -23,6 +23,14 @@
   "Muestra todos los mensajes que han intercambiado los usuarios con las id indicadas",
   "query": "messages.find({ $or: [{\"sender\": {0}, \"receptant\": {1}}, {\"sender\": {1}, \"receptant\": {0}}], {\"message\": 1})",
   "parametros": ["emisor", "receptor"]
+  },
+  {
+  "name": "Consulta: Mensajes intercambiados, , con localizacion",
+  "database": "mongo",
+  "description":
+  "Muestra todos los mensajes que han intercambiado los usuarios con las id indicadas y con coordenadas indicadas en el input.",
+  "query": "messages.find({ \"lat\": {1}, \"long\": {2}, $or: [{\"sender\": {0}, \"receptant\": {1}}, {\"sender\": {1}, \"receptant\": {0}}]}, {\"message\": 1})",
+  "parametros": ["emisor", "receptor", "lat", "long"]
   },
   {
   "name": "Consulta: usuario con id=1",
