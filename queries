@@ -13,7 +13,7 @@
   "database": "mongo",
   "description":
   "Muestra todos los mensajes que han intercambiado los usuarios con las id indicadas",
-  "query": "messages.find({\"sender\": {0}, \"receptant\": {1}}, {\"message\": 1})",
+  "query": "messages.find({ $or: [{\"sender\": {0}, \"receptant\": {1}}, {\"sender\": {1}, \"receptant\": {0}}], {\"message\": 1})",
   "parametros": ["emisor", "receptor"]
   },
   {
@@ -21,7 +21,7 @@
   "database": "mongo",
   "description":
   "Muestra todos los mensajes que han intercambiado los usuarios con las id indicadas",
-  "query": "messages.find({\"message\": /ja/}, {\"message\": 1})",
+  "query": "messages.find({ $or: [{\"sender\": {0}, \"receptant\": {1}}, {\"sender\": {1}, \"receptant\": {0}}], {\"message\": 1})",
   "parametros": ["emisor", "receptor"]
   }
 ]
