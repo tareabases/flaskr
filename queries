@@ -1,5 +1,6 @@
 [
 
+  
   {
   "name": "Consulta: Mensajes del usuario",
   "database": "mongo",
@@ -7,6 +8,14 @@
   "Muestra todos los mensajes enviados por el usuario con la id indicada",
   "query": "messages.find({\"sender\": {0}}, {\"message\": 1})",
   "parametros": ["id emisor"]
+  },
+  {
+  "name": "Consulta: Mensajes emitidos por un usuario, entre dos fechas",
+  "database": "mongo",
+  "description":
+  "Muestra todos los mensajes enviados por el usuario con la id indicada, y con fechas indicadas en el input.",
+  "query": "messages.find({\"sender\": {0}, \"date\": { $gte: ISODate(\"{1}\"), $lt: ISODate(\"{2}\")}, {\"message\": 1})",
+  "parametros": ["id emisor", "fecha_inicio", "fecha_termino"]
   },
   {
   "name": "Consulta: Mensajes emitidos por un usuario, con localizacion",
@@ -25,20 +34,20 @@
   "parametros": ["emisor", "receptor"]
   },
   {
+  "name": "Consulta: Mensajes intercambiados" entre dos fechas",
+  "database": "mongo",
+  "description":
+  "Muestra todos los mensajes que han intercambiado los usuarios con las id indicadas, y con fechas indicadas en el input.",
+  "query": "messages.find({ \"date\": { $gte: ISODate(\"{2}\"), $lt: ISODate(\"{3}\")}, $or: [{\"sender\": {0}, \"receptant\": {1}}, {\"sender\": {1}, \"receptant\": {0}}], {\"message\": 1})",
+  "parametros": ["emisor", "receptor", "fecha_inicio", "fecha_termino"]
+  },
+  {
   "name": "Consulta: Mensajes intercambiados, , con localizacion",
   "database": "mongo",
   "description":
   "Muestra todos los mensajes que han intercambiado los usuarios con las id indicadas y con coordenadas indicadas en el input.",
   "query": "messages.find({ \"lat\": {1}, \"long\": {2}, $or: [{\"sender\": {0}, \"receptant\": {1}}, {\"sender\": {1}, \"receptant\": {0}}]}, {\"message\": 1})",
   "parametros": ["emisor", "receptor", "lat", "long"]
-  },
-  {
-  "name": "Consulta: usuario con id=1",
-  "database": "mongo",
-  "description":
-  "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
-  "query": "users.find( {\"id\": 1}, {\"age\": 1, \"name\": 1} )",
-  "parametros": ["id emisor"]
   },
   {
   "name": "Consulta: busqueda por texto",
