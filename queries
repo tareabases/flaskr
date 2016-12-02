@@ -16,12 +16,20 @@
   "query": "myCollection.find( {\"attribute\": \"value\"} )",
   "parametros": ["id emisor", "fechas"]
   },
-    {
+  {
   "name": "Consulta: Mensajes del usuario",
   "database": "mongo",
   "description":
   "Muestra todos los mensajes enviados por el usuario con la id indicada",
   "query": "messages.find({\"sender\": 1}, {\"message\": 1})",
   "parametros": ["prueba"]
-  }
+  },
+  {
+  "name": "Consulta: Mensajes intercambiados",
+  "database": "mongo",
+  "description":
+  "Muestra todos los mensajes que han intercambiado los usuarios con las id indicadas",
+  "query": "messages.find({\"sender\": 1}, {\"message\": 1})",
+  "parametros": ["id1", "id2"]
+  },
 ]
