@@ -36,16 +36,6 @@ postgresdb = psycopg2.connect(
     user=POSTGRESUSER,
     password=POSTGRESPASS)
 '''
-=======
-#POSTGRESDATABASE = "bases.ing.puc.cl"
-#POSTGRESUSER = "grupo22"
-#POSTGRESPASS = "grupo22"
-#postgresdb = psycopg2.connect(
-#    database=POSTGRESDATABASE,
-#    user=POSTGRESUSER,
-#    password=POSTGRESPASS)
-
->>>>>>> origin/master
 
 #Cambiar por Path Absoluto en el servidor
 QUERIES_FILENAME = '/var/www/flaskr/queries'
