@@ -32,4 +32,12 @@
   "query": "users.find( {\"id\": 1}, {\"age\": 1, \"name\": 1} )",
   "parametros": ["id emisor"]
   },
+  {
+  "name": "Consulta: busqueda por texto",
+  "database": "mongo",
+  "description":
+  "",
+  "query": "message.find({$text: {$search: {0}} )",
+  "parametros": ["Frase1"]
+  },
 ]
