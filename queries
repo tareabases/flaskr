@@ -29,7 +29,7 @@
   "database": "mongo",
   "description":
   "Muestra todos los mensajes que han intercambiado los usuarios con las id indicadas",
-  "query": "messages.find({\"sender\": 1, \"receptant\": 22})",
+  "query": "messages.find({$or [\"sender\": 1, \"receptant\": 22}, {$or [\"sender\": 22, \"receptant\": 1}])",
   "parametros": ["id1", "id2"]
   }
 ]
