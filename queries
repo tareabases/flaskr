@@ -44,8 +44,16 @@
   "name": "Consulta: busqueda por texto",
   "database": "mongo",
   "description":
-  "",
+  " agregar palabras que se desean en el mensaje",
   "query": "message.find({$text: {$search: {0}} )",
   "parametros": ["Frase1"]
+  },
+  {
+  "name": "Consulta: busqueda por texto que no tengan la palabra",
+  "database": "mongo",
+  "description":
+  "agregar palabras que no se desean en el mensaje",
+  "query": "message.find({$text: {$search: "-" + {0}} )",
+  "parametros": ["Palabra"]
   }
 ]
