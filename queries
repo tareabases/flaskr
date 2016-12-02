@@ -17,7 +17,7 @@
   "parametros": ["id emisor", "fechas"]
   },
     {
-  "name": "Consulta: prueba",
+  "name": "Consulta: Mensajes del usuario con Id = 1",
   "database": "mongo",
   "description":
   "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
