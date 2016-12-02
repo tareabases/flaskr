@@ -47,5 +47,5 @@
   "",
   "query": "message.find({$text: {$search: {0}} )",
   "parametros": ["Frase1"]
-  },
+  }
 ]

@@ -59,3 +59,10 @@
     background-color: #eff0f1;
     border-radius: 5px;
   }
+  .input-query {
+    padding: 10px;
+    margin-top: 10px;
+    /*display: none;*/
+    background-color: #eff0f1;
+    border-radius: 5px;
+  }
