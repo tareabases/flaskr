@@ -5,7 +5,7 @@
   "database": "mongo",
   "description":
   "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
-  "query": "users.find( {\"id\": 1,}, {} )",
+  "query": "users.find( {\"id\": 1,}, {\"age\": 1, \"name\": 1} )",
   "parametros": ["id emisor"]
   },
   {
