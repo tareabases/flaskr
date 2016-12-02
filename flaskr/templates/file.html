@@ -4,7 +4,6 @@
   <div class="main-container">
     <div class="container">
       {% for name, db, description, query, parametros in results %}
-      {% set algomuysucio = 'onClickQuery("{}","{}")'.format(db, query) %}
 
       <div class="query-card mdl-shadow--2dp">
         <div class="mdl-card__title">
@@ -33,6 +32,8 @@
           <input type="text" placeholder={{parametro}} name="uname" required></input>
           {% endfor %}
         </div>
+      
+      {% set algomuysucio = 'onClickQuery("{}","{}")'.format(db, query) %}
       </div>
       {% endfor %}
     </div>
