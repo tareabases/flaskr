@@ -21,7 +21,7 @@
   "database": "mongo",
   "description":
   "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
-  "query": "messages.find({\"sender\": $$parametros}, {\"message\": 1})",
+  "query": "messages.find({\"sender\": $$prueba}, {\"message\": 1})",
   "parametros": ["prueba"]
   }
 ]
