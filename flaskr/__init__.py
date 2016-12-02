@@ -18,7 +18,7 @@ app = create_app()
 
 
 # REPLACE WITH YOUR DATABASE NAME
-MONGODATABASE = "myDatabase"
+MONGODATABASE = "rop"
 MONGOSERVER = "localhost"
 MONGOPORT = 27017
 client = MongoClient(MONGOSERVER, MONGOPORT)
@@ -27,6 +27,7 @@ mongodb = client[MONGODATABASE]
 '''
 # Uncomment for postgres connection
 # REPLACE WITH YOUR DATABASE NAME, USER AND PASS
+<<<<<<< HEAD
 POSTGRESDATABASE = "bases.ing.puc.cl"
 POSTGRESUSER = "grupo22"
 POSTGRESPASS = "panchonegro"
@@ -35,6 +36,16 @@ postgresdb = psycopg2.connect(
     user=POSTGRESUSER,
     password=POSTGRESPASS)
 '''
+=======
+#POSTGRESDATABASE = "bases.ing.puc.cl"
+#POSTGRESUSER = "grupo22"
+#POSTGRESPASS = "grupo22"
+#postgresdb = psycopg2.connect(
+#    database=POSTGRESDATABASE,
+#    user=POSTGRESUSER,
+#    password=POSTGRESPASS)
+
+>>>>>>> origin/master
 
 #Cambiar por Path Absoluto en el servidor
 QUERIES_FILENAME = '/var/www/flaskr/queries'
@@ -47,7 +58,8 @@ def home():
         pairs = [(x["name"],
                   x["database"],
                   x["description"],
-                  x["query"]) for x in json_file]
+                  x["query"],
+                  x["parametros"]) for x in json_file]
         return render_template('file.html', results=pairs)
 
 
